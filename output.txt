@@ -1,0 +1,99 @@
+Allocated 25 bytes for variable a at address 0
+Allocated 5 bytes for variable b at address 25
+Reference: d1 is now referring to the same block as a
+Reference: e is now referring to the same block as b
+
+Allocated Blocks:
+Start: 0, Size: 25, RefCount: 2, Variables: a d1 
+Start: 25, Size: 5, RefCount: 2, Variables: b e 
+Free Blocks:
+Start: 30, Size: 70
+Total Memory Allocated: 30 bytes
+Total Memory Free: 70 bytes
+
+Allocated 30 bytes for variable c at address 30
+Allocated 5 bytes for variable d at address 60
+
+Allocated Blocks:
+Start: 0, Size: 25, RefCount: 2, Variables: a d1 
+Start: 25, Size: 5, RefCount: 2, Variables: b e 
+Start: 30, Size: 30, RefCount: 1, Variables: c 
+Start: 60, Size: 5, RefCount: 1, Variables: d 
+Free Blocks:
+Start: 65, Size: 35
+Total Memory Allocated: 65 bytes
+Total Memory Free: 35 bytes
+
+Reference count decreased by one for the block referred by e
+
+Allocated Blocks:
+Start: 0, Size: 25, RefCount: 2, Variables: a d1 
+Start: 25, Size: 5, RefCount: 1, Variables: b 
+Start: 30, Size: 30, RefCount: 1, Variables: c 
+Start: 60, Size: 5, RefCount: 1, Variables: d 
+Free Blocks:
+Start: 65, Size: 35
+Total Memory Allocated: 65 bytes
+Total Memory Free: 35 bytes
+
+Allocated 15 bytes for variable e at address 65
+
+Allocated Blocks:
+Start: 0, Size: 25, RefCount: 2, Variables: a d1 
+Start: 25, Size: 5, RefCount: 1, Variables: b 
+Start: 30, Size: 30, RefCount: 1, Variables: c 
+Start: 60, Size: 5, RefCount: 1, Variables: d 
+Start: 65, Size: 15, RefCount: 1, Variables: e 
+Free Blocks:
+Start: 80, Size: 20
+Total Memory Allocated: 80 bytes
+Total Memory Free: 20 bytes
+
+Allocated 5 bytes for variable f at address 80
+Allocated 10 bytes for variable g at address 85
+
+Allocated Blocks:
+Start: 0, Size: 25, RefCount: 2, Variables: a d1 
+Start: 25, Size: 5, RefCount: 1, Variables: b 
+Start: 30, Size: 30, RefCount: 1, Variables: c 
+Start: 60, Size: 5, RefCount: 1, Variables: d 
+Start: 65, Size: 15, RefCount: 1, Variables: e 
+Start: 80, Size: 5, RefCount: 1, Variables: f 
+Start: 85, Size: 10, RefCount: 1, Variables: g 
+Free Blocks:
+Start: 95, Size: 5
+Total Memory Allocated: 95 bytes
+Total Memory Free: 5 bytes
+
+Deallocated memory for variable b
+Deallocated memory for variable d
+
+Allocated Blocks:
+Start: 0, Size: 25, RefCount: 2, Variables: a d1 
+Start: 30, Size: 30, RefCount: 1, Variables: c 
+Start: 65, Size: 15, RefCount: 1, Variables: e 
+Start: 80, Size: 5, RefCount: 1, Variables: f 
+Start: 85, Size: 10, RefCount: 1, Variables: g 
+Free Blocks:
+Start: 25, Size: 5
+Start: 60, Size: 5
+Start: 95, Size: 5
+Total Memory Allocated: 85 bytes
+Total Memory Free: 15 bytes
+
+Not enough memory for allocation as of now. Trying after eliminating any present fragmentation.
+
+Allocated 12 bytes for variable m at address 85
+
+Allocated Blocks:
+Start: 0, Size: 25, RefCount: 2, Variables: a d1 
+Start: 25, Size: 30, RefCount: 1, Variables: c 
+Start: 55, Size: 15, RefCount: 1, Variables: e 
+Start: 70, Size: 5, RefCount: 1, Variables: f 
+Start: 75, Size: 10, RefCount: 1, Variables: g 
+Start: 85, Size: 12, RefCount: 1, Variables: m 
+Free Blocks:
+Start: 97, Size: 3
+Total Memory Allocated: 97 bytes
+Total Memory Free: 3 bytes
+

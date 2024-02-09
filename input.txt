@@ -1,0 +1,20 @@
+allocate 25 a
+allocate 5 b
+reference d1 a
+reference e b
+print
+allocate 30 c
+allocate 5 d
+print
+free e
+print
+allocate 15 e
+print
+allocate 5 f
+allocate 10 g
+print
+free b
+free d
+print
+allocate 12 m
+print
